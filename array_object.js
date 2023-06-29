@@ -61,7 +61,23 @@ let familyData = {
   ],
 };
 
-let sons_of_grandeFather = familyData.sons;
-for(i=0; i<sons_of_grandeFather; i++){
-    console.log(sons_of_grandeFather[i].name)
+let  sonsNames = familyData.sons.map((son) => son.name);
+console.log(sonsNames);
+
+function sonsbyId(id){
+    let sons = familyData.sons.find((sons)=> sons.id === id)
+    console.log(sons)
 }
+sonsbyId(1);
+
+function vehicalsId(x){
+    let son = familyData.sons.find((son)=> son.id == x);
+    console.log(son.vehicals)
+}
+vehicalsId(2);
+
+function agebyId(x){
+  let son = familyData.sons.find((son=> son.id == x))
+  console.log(son.age)
+}
+agebyId(1)
