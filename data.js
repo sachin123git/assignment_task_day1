@@ -14,19 +14,22 @@
 // printCityNames(state);
 
 
-// let fs = require('fs')
+let fs = require('fs')
 
-// let rowdata = fs.readFileSync("./JSON_data/data.json")
+let rowdata = fs.readFileSync("./JSON_data/data.json")
 
-// let data = JSON.parse(rowdata)
+let data = JSON.parse(rowdata)
 
-// function sort_population(state){
-//     let population = data.filter((entry)=> entry.state_name === state).map((entry)=> entry.population)
-//     console.log(population.sort())
-// }
+function sort_population(state){
+    let population = data.filter((entry)=> entry.state_name === state).map((entry)=> entry.population)
+    console.log(population.sort())
+    // for(i=0; i<population.length; i++){
+    // console.log((population[i]))
+    // }
+}
 
-// let state = "Mahārāshtra";
-// sort_population(state);
+let state = "Mahārāshtra";
+sort_population(state);
 
 
 // const fs = require("fs");
